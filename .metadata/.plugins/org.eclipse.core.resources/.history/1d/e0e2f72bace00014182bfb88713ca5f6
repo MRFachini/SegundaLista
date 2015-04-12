@@ -1,0 +1,81 @@
+package br.com.reges.listaexercicios2;
+
+import java.util.Scanner;
+
+public class Exercicio9Aluno {
+
+	public static void main(String[] args) {
+		
+		@SuppressWarnings("resource")
+		Scanner teclado = new Scanner(System.in);
+		
+		/**
+		 * metodo que le os numero e o nome.
+		 */
+		String nome;
+		int nota, nota1, nota2;
+		int falta;
+		Double result, result1;
+		
+		/**
+		 * metodo que solicita ao usuario que ele informe o nome do aluno.
+		 */
+		System.out.println("Informe o nome do aluno: ");
+		/**
+		 * metodo que armazena o nome informado pelo usuario.
+		 */
+		nome = teclado.nextLine();
+		/**
+		 * metodo que solicita ao usuario que ele informe o valor.
+		 */
+		System.out.println("Informe a primeira nota do aluno: ");
+		/**
+		 * metodo que armazena o valor informado pelo usuario.
+		 */
+		nota = Integer.parseInt(teclado.nextLine());
+		
+		/**
+		 * metodo que solicita ao usuario que ele informe o valor.
+		 */
+		System.out.println("Informe a segunda nota do aluno: ");
+		/**
+		 * metodo que armazena o valor informado pelo usuario.
+		 */
+		nota1 = Integer.parseInt(teclado.nextLine());
+		
+		/**
+		 * metodo que solicita ao usuario que ele informe o valor.
+		 */
+		System.out.println("Informe a terceira nota do aluno: ");
+		/**
+		 * metodo que armazena o valor informado pelo usuario.
+		 */
+		nota2 = Integer.parseInt(teclado.nextLine());
+		
+		/**
+		 * metodo que solicita ao usuario que ele informe a quantidade de falta.
+		 */
+		System.out.println("Informe a quantidade de falta do aluno: ");
+		/**
+		 * metodo que armazena a quantidade de falta informado pelo usuario.
+		 */
+		falta = Integer.parseInt(teclado.nextLine());
+		
+		/**
+		 * metodo que fara a verificacao e retornara a resposta.
+		 */
+		result = (falta * 1.25);
+		result1 = (double) ((nota + nota1 + nota2) /3);
+		
+		if (result <= 25.0 && result1 >= 7.0){
+			/**
+			 * metodo que informa a resposta ao usuario.
+			 */
+			System.out.println(
+					"O aluno "+nome+" esta aprovado com uma media de "+result1+" e uma porcentagem de falta de "+result+" %");
+		}else {
+			System.out.println("O aluno esta REPROVADO");
+		}
+	}
+
+}

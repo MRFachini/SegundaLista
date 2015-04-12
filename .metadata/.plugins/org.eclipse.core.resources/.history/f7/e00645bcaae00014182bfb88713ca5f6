@@ -1,0 +1,104 @@
+package br.com.reges.listaexercicios2;
+
+import java.util.Scanner;
+
+	public class Exercicio7Triangulo {
+		
+	public static void main(String[] args) {
+		
+		@SuppressWarnings("resource")
+		Scanner teclado = new Scanner(System.in);
+		
+		/**
+		 * metodo que le o numero.
+		 */
+		int num;
+		int num1;
+		int num2;
+		
+		boolean running = true;
+		
+		while(running){
+		
+		/**
+		 * metodo que solicita ao usuario que ele informe o valor.
+		 */
+		System.out.println("Informe o numero desejado: ");
+		/**
+		 * metodo que armazena o valor informado pelo usuario.
+		 */
+		num = Integer.parseInt(teclado.nextLine());
+		
+		/**
+		 * metodo que solicita ao usuario que ele informe o valor.
+		 */
+		System.out.println("Informe o segundo numero desejado: ");
+		/**
+		 * metodo que armazena o valor informado pelo usuario.
+		 */
+		num1 = Integer.parseInt(teclado.nextLine());
+		
+		/**
+		 * metodo que solicita ao usuario que ele informe o valor.
+		 */
+		System.out.println("Informe o terceiro numero desejado: ");
+		/**
+		 * metodo que armazena o valor informado pelo usuario.
+		 */
+		num2 = Integer.parseInt(teclado.nextLine());
+		
+		/**
+		 * metodo que fara a verificacao e retornara a resposta.
+		 */
+		
+		if (num == num1 && num1 == num2 && num == num2){
+			/**
+			 * metodo que informa a resposta ao usuario.
+			 */
+			System.out.println("O formato do triangulo seria um Equilatero");
+			
+		}else if (num != num1 && num1 != num2 && num != num2) {
+			/**
+			 * metodo que informa a resposta ao usuario.
+			 */
+			System.out.println("O formato do triangulo seria um Escaleno");
+			
+		}else if ((num1 == num2) && (num != num2) /*|| (num != num1) && (num1 == num2)*/) {
+			/**
+			 * metodo que informa a resposta ao usuario.
+			 */
+			System.out.println("O formato do triangulo seria um Isosceles");
+			
+		}else if ((num1 != num2) && (num == num2) /*|| (num1 != num) && (num1 == num2)*/){
+			/**
+			 * metodo que informa a resposta ao usuario.
+			 */
+			System.out.println("O formato do triangulo seria um Isosceles");
+			
+		}else if ((num2 != num1) && (num1 == num) /*|| (num2 != num) && (num1 == num)*/){
+			/**
+			 * metodo que informa a resposta ao usuario.
+			 */
+			System.out.println("O formato do triangulo seria um Isosceles");
+			
+		}
+		/**
+		 * Metodo onde o usuario dis se deseja continuar ou não
+		 */
+		System.out.println("\nDeseja continuar:(digite 1 para sim, ou 2 para nâo continuar) ");
+		/**
+		 * metodo que recebe a informação digitada do usuario.
+		 */
+		int num4 = Integer.parseInt(teclado.nextLine());
+		/**
+		 * metodo onde faz a verificação da resposta do usuario.
+		 */
+		if (num4 == 2){
+			/**
+			 * caso sua resposta tenha sido o numero 2 running vai receber false e o programa nao vai ser execultado.
+			 */
+			running = false;
+			}
+		}
+	}
+}

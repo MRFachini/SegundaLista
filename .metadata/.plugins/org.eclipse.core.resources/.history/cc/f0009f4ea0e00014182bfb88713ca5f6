@@ -1,0 +1,71 @@
+package br.com.reges.listaexercicios2;
+
+import java.util.Scanner;
+
+/**
+ * Classe que le um numero e retorna ao usuario se ele e par ou impar. 
+ * 
+ * 
+ * @author Rafael Magni Franzoni
+ *
+ */
+public class Exercicio2NumeroParouImpar {
+	
+	public static void main(String[] args) {
+		
+		@SuppressWarnings("resource")
+		Scanner teclado = new Scanner(System.in);
+		/**
+		 * metodo que le o numero.
+		 */
+		int num;
+		
+		boolean running = true;
+		
+		while(running){
+		
+		/**
+		 * metodo que solicita ao usuario que ele informe o valor.
+		 */
+		System.out.println("Informe o numero desejado: ");
+		/**
+		 * metodo que armazena o valor informado pelo usuario.
+		 */
+		num = Integer.parseInt(teclado.nextLine());
+		/**
+		 * metodo que fara a verificacao e retornara a resposta.
+		 */
+		if (num % 2 == 0) {
+			/**
+			 * metodo que imforma ao usuario que o numero e Par
+			 */
+			System.out.println("Número é par: "); 
+		}else {
+			/**
+			 * metodo que informa ao usuario que o numero e Impar.
+			 */
+			System.out.println("Número é impar: "+ num);
+			}
+		/**
+		 * Metodo onde o usuario dis se deseja continuar ou não
+		 */
+		System.out.println("\nDeseja continuar:(digite 1 para sim, ou 2 para nâo continuar) ");
+		/**
+		 * metodo que recebe a informação digitada do usuario.
+		 */
+		int num1 = Integer.parseInt(teclado.nextLine());
+		/**
+		 * metodo onde faz a verificação da resposta do usuario.
+		 */
+		if (num1 == 2){
+			/**
+			 * caso sua resposta tenha sido o numero 2 running vai receber false e o programa nao vai ser execultado.
+			 */
+			running = false;
+		}
+		
+		}
+		
+	}
+
+}

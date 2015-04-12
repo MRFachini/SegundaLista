@@ -1,0 +1,47 @@
+package br.com.reges.listaexercicios2;
+
+import java.util.Scanner;
+
+public class Exercicio10Entre20a90 {
+
+	public static void main(String[] args) {
+
+		@SuppressWarnings("resource")
+		Scanner teclado = new Scanner(System.in);
+		
+		/**
+		 * metodo que le o numero.
+		 */
+		int num;
+		
+		boolean result = false;
+		
+		/**
+		 * metodo que solicita ao usuario que ele informe o valor.
+		 */
+		System.out.println("Informe o numero desejado: ");
+		/**
+		 * metodo que armazena o valor informado pelo usuario.
+		 */
+		num = Integer.parseInt(teclado.nextLine());
+		
+		
+		for (int i = 20; num >= i && num <= 90;i++){
+			/**
+			 * metodo que informa a resposta ao usuario.
+			 */
+			result  = true;
+			
+		}
+		if (result  == true){
+			/**
+			 * metodo que informa a resposta ao usuario.
+			 */
+			System.out.println("O numero esta compreendido entra 20 e 90 - " + num);
+			
+		}else {
+			System.out.println("O numero e menor que 20 - " +num);
+		}
+	}
+
+}

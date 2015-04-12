@@ -1,0 +1,64 @@
+package br.com.reges.Exercicio1;
+
+	import java.util.Scanner;
+	/**
+	 * Classe que le dois valores e retorna ao usuario se são iguais ou diferentes.
+	 * 
+	 * 
+	 * @author Rafael Magni Franzoni
+	 *
+	 */
+
+	public class Exercicio1{
+		
+		public static void main(String[] args) {
+			
+			@SuppressWarnings("resource")
+			Scanner teclado = new Scanner(System.in);
+			/**
+			 * metodo que le o primeiro numero
+			 */
+			int num1 = 0;
+			/**
+			 * metodo que le o segundo numero.
+			 */
+			int num2 = 0;
+					
+			/**
+			 * metodo que solicita ao usuario que ele informe o valor.
+			 */
+			System.out.println("Informe o primeiro numero: ");
+			/**
+			 * metodo que armazena o valor informado pelo usuario.
+			 */
+			num1 = Integer.parseInt(teclado.nextLine());
+			/**
+			 * metodo que solicita ao usuario que ele informe o valor.
+			 */
+			System.out.println("Informe o segundo numero: ");
+			/**
+			 * metodo que armazena o valor informado pelo usuario.
+			 */
+			num2 = Integer.parseInt(teclado.nextLine());
+			
+			/**
+			 * metodo que faz a comparação se os numeros são iguais ou diferentes.
+			 */
+			if (num1 == num2){
+				/**
+				 * metodo que informa ao usuario o resultado
+				 */
+				System.out.println("Os numeros "+num1 + " e " + num2 +" são iguais ");
+			}else{
+				/**
+				 * metodo que informa ao usuario o resultado
+				 */
+				System.out.println("Os numeros "+num1 + " e " + num2 +" são diferentes ");
+				
+			}
+		}
+
+	}
+
+	
+

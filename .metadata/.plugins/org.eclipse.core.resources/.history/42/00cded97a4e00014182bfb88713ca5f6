@@ -1,0 +1,79 @@
+package br.com.reges.listaexercicios2;
+
+import java.util.Scanner;
+
+public class Exercicio3NumerosDivisiveis {
+	
+public static void main(String[] args) {
+		
+		@SuppressWarnings("resource")
+		Scanner teclado = new Scanner(System.in);
+		/**
+		 * metodo que le o numero.
+		 */
+		int num;
+		int num2;
+		int rusult;
+		
+		boolean running = true;
+		
+		while(running){
+		
+		/**
+		 * metodo que solicita ao usuario que ele informe o valor.
+		 */
+		System.out.println("Informe o numero desejado: ");
+		/**
+		 * metodo que armazena o valor informado pelo usuario.
+		 */
+		num = Integer.parseInt(teclado.nextLine());
+		
+		/**
+		 * metodo que solicita ao usuario que ele informe o valor.
+		 */
+		System.out.println("Informe o segundo numero desejado: ");
+		/**
+		 * metodo que armazena o valor informado pelo usuario.
+		 */
+		num2 = Integer.parseInt(teclado.nextLine());
+		
+		/**
+		 * metodo que fara a verificacao e retornara a resposta.
+		 */
+		if (num % num2 == 0) {
+			
+			rusult = (num / num2);
+			
+		/**
+		 * metodo que imforma ao usuario que os numeros sao divisiveis.
+		 */
+		System.out.println("Os Números são Divisíveis: "+ num+ " / " +num2+ " = " + rusult); 
+	}else {
+		rusult = (num / num2);
+		/**
+		 * metodo que imforma ao usuario que os numeros nao sao divisiveis.
+		 */
+		System.out.println("Os Número não são Divisíveis: "+ num+ " / " +num2+ " = " + rusult);
+		}
+	/**
+	 * Metodo onde o usuario dis se deseja continuar ou não
+	 */
+	System.out.println("\nDeseja continuar:(digite 1 para sim, ou 2 para nâo continuar) ");
+	/**
+	 * metodo que recebe a informação digitada do usuario.
+	 */
+	int num1 = Integer.parseInt(teclado.nextLine());
+	/**
+	 * metodo onde faz a verificação da resposta do usuario.
+	 */
+	if (num1 == 2){
+		/**
+		 * caso sua resposta tenha sido o numero 2 running vai receber false e o programa nao vai ser execultado.
+		 */
+		running = false;
+			}
+	
+		}
+
+	}
+}
